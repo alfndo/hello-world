@@ -10,5 +10,5 @@ func main() {
 		w.Write([]byte("hidup jokowi v3"))
 	})
 
-	log.Fatal(http.ListenAndServe(":8080", nil))
+	log.Fatal(http.ListenAndServe(":8080", nil)
 }
