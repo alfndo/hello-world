@@ -49,7 +49,7 @@ pipeline {
       }
       post {
         failure { sh 'docker logs $NAME-candidate || true' }
-        always  { sh 'docker rm -f $NAME-candidate || true' }
+        cleanup { sh 'docker rm -f $NAME-candidate || true' }
       }
     }
 
